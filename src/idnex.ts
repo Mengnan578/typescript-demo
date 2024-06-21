@@ -1,30 +1,4 @@
-# Ts代码学习
 
-## 快速入门
-ts 的安装
-``` npm i typescript --save-dev```
-检查ts是够安装成功
-``` npm tsc ``` 
-
-使用上的小问题
-1. 默认情况ts会假设当前在dom环境；
-2. 如果代码中没有模块化语句，默认代码是全局执行的，所以变量是全局变量，会有变量名冲突的风险，会爆如下错误；要最简单的解决就是加上模块化代码
-![alt text](./img/image1.png)
-3. ts默认编译的目标代码是ES3
-### tsconfig.js
-全局安装   ``` npm i -g ts-node ```,可以在内存编译成js；
-    命令行执行：``` ts-node + 对应文件路径 ```
-
-全局安装   ``` npm i nodemon -D ```, 可以帮助你监听文件，每次保存文件就可以帮你执行一些命令
-    script 脚本添加 ``` nodemon --exec ts-node src/index.ts```
-
-可以使用 ``` ts --init 生成ts配置文件 ```
-
-某一个函数点进去会进入vscode默认的ts类型，如果需要进入自己本地node_module类型，需要配置一下,方法如下：```cotl + shift + p``` 打开命令行，输入 ```select typescript```
-
-### ts常见类型
-js的基础数据类型ts都有一一对应的，同时增加了一下类型
-```javascript
 // 字面量(必须是const 定义的字符串)
 const aaa = "aaaa";
 
@@ -96,4 +70,8 @@ let strlength1 = (<string>someValue).length;
 // 非空断言，当你确定某一个值不是null或者undifine，可以直接使用非空断言
 let maybe : string  | undefined = "hellow";
 let definestring = maybe!;
-```
+
+
+
+
+

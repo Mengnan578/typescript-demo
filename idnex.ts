@@ -1,1 +1,0 @@
-const wangfq :string = "11111";
